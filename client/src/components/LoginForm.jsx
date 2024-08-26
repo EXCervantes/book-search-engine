@@ -21,16 +21,15 @@ const LoginForm = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
-  // TODO Write logging in user form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+    // const form = event.currentTarget;
+    // if (form.checkValidity() === false) {
+    //   event.preventDefault();
+    //   event.stopPropagation();
+    // }
 
     try {
       const { data } = await login({

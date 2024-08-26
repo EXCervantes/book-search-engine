@@ -38,7 +38,7 @@ This project is deployed to [Render Dashboard](https://dashboard.render.com/) as
   
 ## Installation
 
-This is a full functioning application deployed at [this link](https://pwa-jate-zgyl.onrender.com/).
+This is a full functioning application deployed at [this link](https://book-search-engine-c3e9.onrender.com/).
 
 Alternatively, a user can clone the repository to view it on their local machine. Run `npm install` to install the necessary dependencies for the page to work. Initialize the application by using `npm run start`.
 
@@ -50,7 +50,7 @@ If the user creates an account or logs in the option to save a book will become 
 
 ### Link to Deployed Application
 
-Follow [this link]() to visit this application's page and install it locally.
+Follow [this link](https://book-search-engine-c3e9.onrender.com/) to visit this application's page.
 
 ### Screenshots of the Application
 

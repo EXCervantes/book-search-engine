@@ -81,7 +81,8 @@ const SearchBooks = () => {
       });
 
       if (error) {
-        throw new Error('something went wrong!');
+        error.message = 'something went wrong logging in user: ' + error.message
+        throw error;
       }
 
       // if book successfully saves to user's account, save book id to state
@@ -93,7 +94,7 @@ const SearchBooks = () => {
 
   return (
     <>
-      <div className="text-light bg-dark p-5">
+      <div fluid className="text-light bg-dark p-5">
         <Container>
           <h1>Search for Books!</h1>
           <Form onSubmit={handleFormSubmit}>
