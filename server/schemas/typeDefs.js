@@ -30,8 +30,8 @@ const typeDefs = `
   input bookInput {
     authors: [String]
     description: String
-    title: String
-    bookId: String
+    title: String!
+    bookId: String!
     image: String
     link: String
   }

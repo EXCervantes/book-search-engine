@@ -2,7 +2,7 @@
 // import necessary dependencies
 import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import {useMutation} from '@apollo/client';
+import { useMutation } from '@apollo/client';
 
 // import authentication and logging in mutation function
 import Auth from '../utils/auth';
@@ -14,7 +14,7 @@ const LoginForm = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   // use mutation for logging in user
-  const [loginUser, { error }] = useMutation(LOGIN_USER);
+  const [login, { error }] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -26,7 +26,7 @@ const LoginForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await loginUser({
+      const { data } = await login({
         variables: {...userFormData}
       });
 
@@ -36,7 +36,7 @@ const LoginForm = () => {
       }
 
       console.log(data);
-      Auth.login(data.loginUser.token);
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
       setShowAlert(true);
