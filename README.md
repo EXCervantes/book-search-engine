@@ -54,10 +54,9 @@ Follow [this link](https://book-search-engine-c3e9.onrender.com/) to visit this 
 
 ### Screenshots of the Application
 
-![App In Browser](images/jate-pwa-screen1.jpg)
-![App Running Locally](images/jate-pwa-screen2.jpg)
-![Service Worker](images/jate-pwa-screen3.jpg)
-![Manifest File](images/jate-pwa-screen4.jpg)
+![Book Search Logged Out](assets/images/book-search-screen1.jpg)
+![Book Search Logged In](assets/images/book-search-screen2.jpg)
+![Saved Books](assets/images/book-search-screen3.jpg)
 
 ## Credits
 
