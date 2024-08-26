@@ -60,7 +60,11 @@ Follow [this link](https://book-search-engine-c3e9.onrender.com/) to visit this 
 
 ## Credits
 
-N/A
+The following two articles referenced for how to handle an input type under Mutations in the typeDefs.js
+
+_javascript - GraphQL: Use input type and one of its fields in the same query - Stack Overflow_. (2020, February 23). Stack Overflow. Retrieved August 23, 2024, from https://stackoverflow.com/questions/60365959/graphql-use-input-type-and-one-of-its-fields-in-the-same-query
+
+_What's the point of input type in GraphQL? - Stack Overflow_. (2019, April 27). Stack Overflow. Retrieved August 23, 2024, from https://stackoverflow.com/questions/41743253/whats-the-point-of-input-type-in-graphql
   
 ## License
 
