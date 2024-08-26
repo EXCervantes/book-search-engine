@@ -38,12 +38,13 @@ const SignupForm = () => {
         variables: {...userFormData}
       });
 
-      console.log(data);
+      // custom error checking so the error message isn't lost
       if (error) {
         error.message = 'something went wrong adding a user: ' + error.message
         throw error;
       }
 
+      console.log(data)
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);

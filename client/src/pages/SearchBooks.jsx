@@ -1,3 +1,4 @@
+// import necessary dependencies
 import { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import {
@@ -9,6 +10,7 @@ import {
   Row
 } from 'react-bootstrap';
 
+// import authentication, Google Books API, saving a book mutation, and fetching books for a user
 import Auth from '../utils/auth';
 import { searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
@@ -79,9 +81,10 @@ const SearchBooks = () => {
       const { data }= await saveBook({
         variables: { bookData: bookToSave }
       });
-
+      
+      // custom error checking so the error message isn't lost
       if (error) {
-        error.message = 'something went wrong logging in user: ' + error.message
+        error.message = 'something went wrong saving book: ' + error.message
         throw error;
       }
 

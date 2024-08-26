@@ -31,7 +31,6 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      // throw this.AuthenticationError;
     }
 
     // send to next endpoint

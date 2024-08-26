@@ -28,7 +28,6 @@ export const loginUser = (userData) => {
   });
 };
 
-// TODO: Comment this out to see if savedBooks mutation works
 // save book data for a logged in user
 export const saveBook = (bookData, token) => {
   return fetch('/api/users', {

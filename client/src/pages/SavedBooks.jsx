@@ -1,3 +1,4 @@
+// import necessary dependencies
 import { useQuery, useMutation } from '@apollo/client';
 import {
   Container,
@@ -7,6 +8,7 @@ import {
   Col
 } from 'react-bootstrap';
 
+// import authentication and adding/deleting book mutations and query for user
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { GET_ME } from '../utils/queries';
@@ -32,6 +34,7 @@ const SavedBooks = () => {
         variables: { bookId }
       });
 
+      // custom error checking so the error message isn't lost
       if (error) {
         error.message = 'something went wrong removing the book: ' + error.message
         throw error;

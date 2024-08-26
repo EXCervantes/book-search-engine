@@ -12,7 +12,6 @@ const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-
   // use mutation for logging in user
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -25,17 +24,18 @@ const LoginForm = () => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
-    // const form = event.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-    // }
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
 
     try {
       const { data } = await login({
         variables: {...userFormData}
       });
-
+      
+      // custom error checking so the error message isn't lost
       if (error) {
         error.message = 'something went wrong logging in user: ' + error.message
         throw error;

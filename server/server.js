@@ -1,4 +1,4 @@
-// TODO Delete the commented stuff once app is setup
+// Import necessary dependencies
 const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
@@ -7,7 +7,6 @@ const { expressMiddleware } = require('@apollo/server/express4');
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 
-// const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -17,6 +16,7 @@ const server = new ApolloServer({
   resolvers,
 });
 
+// With the GraphQL schema create new Apollo server instance
 const startApolloServer = async () => {
   await server.start();
 
@@ -43,10 +43,6 @@ const startApolloServer = async () => {
     });
   });
 };
-// app.use(routes);
 
-// db.once('open', () => {
-//   app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
-// });
-
+// Initialize server
 startApolloServer();

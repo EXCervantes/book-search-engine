@@ -1,6 +1,8 @@
+// Import our necessary Model and authentication functions
 const { User } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
+// Define the typeDefs parameters and handle requested relevant data
 const resolvers = {
     Query: {
         me: async (parent, args, context) => {
