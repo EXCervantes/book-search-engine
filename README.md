@@ -54,9 +54,9 @@ Follow [this link](https://book-search-engine-c3e9.onrender.com/) to visit this 
 
 ### Screenshots of the Application
 
-![Book Search Logged Out](assets/images/book-search-screen1.jpg)
-![Book Search Logged In](assets/images/book-search-screen2.jpg)
-![Saved Books](assets/images/book-search-screen3.jpg)
+![Book Search Logged Out](/client/src/assets/images/book-search-screen1.jpg)
+![Book Search Logged In](/client/src/assets/images/book-search-screen2.jpg)
+![Saved Books](/client/src/assets/images/book-search-screen3.jpg)
 
 ## Credits
 
