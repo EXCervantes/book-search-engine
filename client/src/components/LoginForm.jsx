@@ -31,7 +31,7 @@ const LoginForm = () => {
       });
 
       if (error) {
-        error.message = 'something went wrong adding a user: ' + error.message
+        error.message = 'something went wrong logging in user: ' + error.message
         throw error;
       }
 

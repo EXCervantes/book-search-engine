@@ -1,4 +1,3 @@
-const { saveBook } = require('../controllers/user-controller');
 const { User } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
@@ -22,13 +21,13 @@ const resolvers = {
             const user = await User.findOne({ email });
 
             if (!user) {
-                throw AuthenticationError;
+                throw new AuthenticationError('Incorrect user details');
             }
 
             const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
-                throw AuthenticationError;
+                throw new AuthenticationError('Incorrect password');
             }
 
             const token = signToken(user);
