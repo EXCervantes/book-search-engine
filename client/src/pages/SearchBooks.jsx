@@ -97,8 +97,8 @@ const SearchBooks = () => {
 
   return (
     <>
-      <div fluid className="text-light bg-dark p-5">
-        <Container>
+      <div className="text-light bg-dark p-5">
+        <Container fluid>
           <h1>Search for Books!</h1>
           <Form onSubmit={handleFormSubmit}>
             <Row>
